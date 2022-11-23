@@ -19,7 +19,7 @@
 		name: 'UsersView',
 		data() {
 			return {
-				users: []
+				users: [],
 			}
 		},
 		methods: {
