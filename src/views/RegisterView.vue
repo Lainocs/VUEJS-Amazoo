@@ -33,14 +33,16 @@
 		methods: {
 			register() {
 				this.$axios.post('/register', this.user)
-					.then(() => {
-						this.$router.push('/users')
+					.then((payload) => {
+						let user = JSON.stringify(payload.data)
+						localStorage.setItem('user', user)
+						this.$parent.$parent.login(user)
+						this.$router.push('/profile')
 					})
 					.catch(error => {
 						console.log(error)
 					})
 			}
 		}
-
 	}
 </script>

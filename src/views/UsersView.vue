@@ -7,9 +7,9 @@
 					<div>
 						<h2>{{ user.name }}</h2>
 						<p>{{ user.email }}</p>
-						<button @click="deleteUser(user.id)">X</button>
 					</div>
 				</router-link>
+				<button @click="deleteUser(user.id)">X</button>
 			</div>
 		</div>
   </div>
